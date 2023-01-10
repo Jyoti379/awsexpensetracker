@@ -51,6 +51,11 @@ app.use('/purchase', purchaseRoutes);
 app.use('/premium', premiumPurchaseRoutes);
 app.use('/password',resetpasswordRoutes);
 
+app.use((req,res)=>{
+    console.log('url',req.url);
+    res.sendFile(path.join(__dirname,`public1/${req.url}`))
+  })
+
 User.hasMany(Expense);
 Expense.belongsTo(User);
 

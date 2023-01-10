@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expense page</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="razorpay" > Buy Premium </button>
+        <div id="premium"></div>
+        <button onclick="download()" id="downloadexpense">Download File</button>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <form onsubmit="addExpense(event)">
+            <label> choose Expenseamount</label>
+            <input id='expense' type="number" name="Expenseamount" />
+            <label> choose description</label>
+            <input id='description' type="text" name="description" />
+            <label>choose catagory</label>
+            <select id="catagory" name="catagory">
+                <option value="Fuel">Fuel</option>
+                <option value="Bills">Bills</option>
+                <option value="Movies">Movies</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <button> Add Expense </button>
+           
+     
+             
+        </form>
+        <section class="pagination" id="pagination"></section>
+        <table id="add-expense"></table>
+        <table id="leaderboard"></table>
+        
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+<script src="expense.js"></script>
+
+
+
+
+
+</body>
+
+</html>
