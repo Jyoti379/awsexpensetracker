@@ -9,7 +9,7 @@ async  function userLogin(event)  {
             email,
              password,
         }
-    await axios.post("http://18.181.195.182:3000/user/login",obj).then(response=>{
+    await axios.post("http://54.248.53.39:3000/user/login",obj).then(response=>{
         console.log(response)
         
         alert(response.data.message) 

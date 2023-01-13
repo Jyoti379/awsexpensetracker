@@ -11,7 +11,7 @@ function userDetails(event)  {
         phonenumber,
         password,
     } 
-    axios.post("http://18.181.195.182:3000/user/signup",obj)
+    axios.post("http://54.248.53.39:3000/user/signup",obj)
     .then((response)=>{
       console.log(response);
       alert("your account created:Log in")
