@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 var cors= require('cors');
 //const helmet=require('helmet');
 
-//const morgan= require('morgan');
+
 //const https= require('https');
 
 const app = express();
@@ -38,7 +38,7 @@ const resetpasswordRoutes=require('./routes/resetpassword');
 
 //const accessLogStream= fs.createWriteStream(path.join(__dirname,'access.log'),{flags:'a'}) //a:here is for appended,to stop overrriding instead adds to file
 //app.use(helmet());
-//app.use(morgan('combined',{stream:accessLogStream}))
+
 
 
 app.use(bodyParser.json());
