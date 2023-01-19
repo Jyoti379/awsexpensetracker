@@ -1,12 +1,13 @@
 const AWS=require('aws-sdk');
+const dotenv =require('dotenv');
 
 const uploadToS3=(data,filename)=>{
     console.log('Data:',data)
-  const BUCKET_NAME ='downloadexpensetracker';
-  const IAM_USER_KEY ='AKIA5REMMAUSQXF3BXOY';
-  const IAM_USER_SECRET ='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';
+  const BUCKET_NAME =process.env.BUCKET_NAME;
+  const IAM_USER_KEY =process.env.IAM_USER_KEY;
+  const IAM_USER_SECRET =process.env.IAM_USER_SECRET;
   
-  
+
   let s3bucket = new AWS.S3({
     accesskeyId:IAM_USER_KEY,
     secretAccessKey:IAM_USER_SECRET
