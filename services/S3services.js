@@ -2,7 +2,7 @@ const AWS=require('aws-sdk');
 const dotenv =require('dotenv');
 
 const uploadToS3=(data,filename)=>{
-    console.log('Data:',data)
+    console.log('Data:',data);
   const BUCKET_NAME =process.env.BUCKET_NAME;
   const IAM_USER_KEY =process.env.IAM_USER_KEY;
   const IAM_USER_SECRET =process.env.IAM_USER_SECRET;
